@@ -1,16 +1,20 @@
-import './muvie_list.css'
-import Muvie_list_item from '../muvie_list_item/muvie_list_item'
+import "./muvie_list.css";
+import MuvieListItem from "../muvie_list_item/muvie_list_item";
 
-const Muvie_list = ({ data ,onDeleted}) => {
+const MuvieList = ({ data, onDeleted, onIncrease, onLike }) => {
   return (
-    <ul className='muvie-list'>
-      {data.map(item =>
-        <Muvie_list_item {...item} key={item.id} onDelete={()=>onDeleted( item.id)}/>
-      )}
+    <ul className="muvie-list">
+      {data.map((item) => (
+        <MuvieListItem
+          {...item}
+          key={item.id}
+          onDelete={() => onDeleted(item.id)}
+          onLike={() => onLike(item.id)}
+          onIncrease={() => onIncrease(item.id)}
+        />
+      ))}
     </ul>
+  );
+};
 
-
-  )
-}
-
-export default Muvie_list
+export default MuvieList;

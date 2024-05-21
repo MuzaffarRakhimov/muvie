@@ -1,12 +1,14 @@
-import './app_info.css'
+import "./app_info.css";
 
-const App_info = () => {
+const AppInfo = ({ appLengthItem, appSevimliFilm }) => {
   return (
-    <div className='app_info'>
-      <p className='fs-3 text-uppercase'>Barcha kinolar soni : </p>
-      <p className='fs-4 text-uppercase'>Korilgan kinolar soni : </p>
+    <div className="app_info">
+      <p className="fs-3 text-uppercase">
+        Barcha kinolar soni : {appLengthItem}
+      </p>
+      <p className="fs-4 text-uppercase">Sevimli kinolar : {appSevimliFilm} </p>
     </div>
-  )
-}
+  );
+};
 
-export default App_info
+export default AppInfo;
